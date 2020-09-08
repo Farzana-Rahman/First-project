@@ -1,3 +1,7 @@
+*{
+  font-family: 'Roboto', sans-serif
+ }
+
 .navbar{
     background-color: rgb(231, 111, 42);
     
@@ -9,4 +13,24 @@
    color: white;
    font-size: 25px;
    margin-left: 5%;
+ }
+
+ table{
+   margin: 0 auto;
+   width: 90%;
+   border-spacing: 0px 5px;
+   border-collapse: separate;
+
+ }
+ table thead tr th{
+   text-align: center;
+   padding: 10px;
+   background-color: rgb(196, 170, 170);;
+
+ }
+ table tbody tr td{
+  padding: 13px;
+  text-align: center;
+  background-color: rgb(241, 185, 176);
+
  }

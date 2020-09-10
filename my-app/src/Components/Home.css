@@ -1,0 +1,17 @@
+ 
+h3{
+    text-align: center;
+    margin-top: 5px;
+  }
+   .card-sec{
+     padding: 4% 10%;
+    
+   }
+   .card{
+     text-align: center;
+     background-color:#F1B9B0;
+   }
+   .card-body{
+     height: 150px;
+    
+   }

@@ -8,7 +8,6 @@ class Analytics extends Component {
 
         this.state={
             data:[],
-
         }
     }
 
@@ -46,7 +45,7 @@ class Analytics extends Component {
 
         return (
             <div>
-                <h3>Last Updated: </h3>
+                
                 <table>
                     <thead>
                         <tr>
@@ -64,6 +63,8 @@ class Analytics extends Component {
                         {data}
                     </tbody>
                 </table>
+
+                
                 
             </div>
         );

@@ -31,14 +31,14 @@ class Prevention extends Component {
 
                     <div className="col-lg-4 col-md-6 col-sm-12">
                     <div className="card">
-                        <img class="card-img-top" src={Logo3} alt="Card image cap"></img>
+                        <img className="card-img-top" src={Logo3} alt="Card image cap"></img>
                     </div>
                     
                     </div>
 
                     <div className="col-lg-4 col-md-6 col-sm-12">
                     <div className="card">
-                        <img class="card-img-top" src={Logo4} alt="Card image cap"></img>
+                        <img className="card-img-top" src={Logo4} alt="Card image cap"></img>
                     </div>
                     
                     </div>
@@ -49,21 +49,21 @@ class Prevention extends Component {
                 <div className="row">
                     <div className="col-lg-4 col-md-6 col-sm-12">
                     <div className="card">
-                        <img class="card-img-top" src={Logo5} alt="Card image cap"></img>
+                        <img className="card-img-top" src={Logo5} alt="Card image cap"></img>
                     </div>
                     
                     </div>
 
                     <div className="col-lg-4 col-md-6 col-sm-12">
                     <div className="card">
-                        <img class="card-img-top" src={Logo8} alt="Card image cap"></img>
+                        <img className="card-img-top" src={Logo8} alt="Card image cap"></img>
                     </div>
                     
                     </div>
 
                     <div className="col-lg-4 col-md-6 col-sm-12">
                     <div className="card">
-                        <img class="card-img-top" src={Logo7} alt="Card image cap"></img>
+                        <img className="card-img-top" src={Logo7} alt="Card image cap"></img>
                     </div>
                     
                     </div>

@@ -9,7 +9,8 @@ class Home extends Component {
 
         this.state={
             data1:[],
-            lastUpdated:" "
+            lastUpdated:" ",
+            Country:"Worldwide"
 
         }
 
@@ -29,6 +30,8 @@ class Home extends Component {
         })
     }
 
+    
+
 
     render() {
 
@@ -39,8 +42,8 @@ class Home extends Component {
                     <h3>Last Updated : {new Date(this.state.lastUpdated).toDateString()}</h3>
 
                     <form>
-                        <select className="select-sec">
-                            <option>country 1</option>
+                        <select className="select-sec"> 
+                            <option  value={this.state.Country}>Worldwide</option>
                             <option>country 2</option>
                             <option>country 3</option>
                         </select>
@@ -53,7 +56,8 @@ class Home extends Component {
                     <div className="card">
                         <div className="card-body">
                             <h2>TotalConfirmed</h2>
-                            <h5>{this.state.data1.cases}</h5>
+                            <h4>{this.state.data1.cases}</h4>
+                            <h4 style={{color:"#0e6785"}}>New Cases:  {this.state.data1.todayCases}</h4>
                         </div>
                     </div>
                     </div>
@@ -62,7 +66,8 @@ class Home extends Component {
                     <div className="card">
                         <div className="card-body">
                         <h2>TotalDeaths</h2>
-                        <h5>{this.state.data1.deaths}</h5>
+                        <h4>{this.state.data1.deaths}</h4>
+                        <h4 style={{color:"#0e6785"}}>New Deaths:  {this.state.data1.todayDeaths}</h4>
                         </div>
                     </div>
                     </div>
@@ -71,7 +76,8 @@ class Home extends Component {
                     <div className="card">
                         <div className="card-body">
                         <h2>TotalRecovered</h2>
-                        <h5>{this.state.data1.recovered}</h5>
+                        <h4>{this.state.data1.recovered}</h4>
+                        <h4 style={{color:"#0e6785"}}>New Recovered:  {this.state.data1.todayRecovered}</h4>
                         </div>
                     </div>
                     </div>

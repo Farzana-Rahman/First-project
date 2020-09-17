@@ -10,7 +10,6 @@ class Home extends Component {
         this.state={
             data1:[],
             lastUpdated:" ",
-            Country:"Worldwide"
 
         }
 
@@ -39,15 +38,8 @@ class Home extends Component {
         return (
             <Fragment>
                 <div className="head-sec">
-                    <h3>Last Updated : {new Date(this.state.lastUpdated).toDateString()}</h3>
-
-                    <form>
-                        <select className="select-sec"> 
-                            <option  value={this.state.Country}>Worldwide</option>
-                            <option>country 2</option>
-                            <option>country 3</option>
-                        </select>
-                    </form>
+                    <h3 >Last Updated : {new Date(this.state.lastUpdated).toDateString()}</h3>
+                    <h2 style={{marginTop:"35px"}}>Worldwide COVID-19 Statistics</h2>
                 </div>
                
                 <div className="card-sec">

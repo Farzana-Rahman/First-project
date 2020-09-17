@@ -70,18 +70,6 @@ body{
 
 
 
-.head-sec{
-  display: flex;
-  justify-content: space-between;
-  margin-left: 20%;
-  margin-right: 20%;
-}
-.select-sec{
-  margin-top: 10px; 
-  height: 35px;
-  border-radius: 5px;
-}
-
 
 p{
   font-size: medium;
@@ -89,7 +77,9 @@ p{
 
 .container{
   margin-top:20px ;
-  background-color: rgb(219, 216, 216);
+  background-color: #FFFFFF;
+  padding: 1%;
+  color: black;
   
 
 }

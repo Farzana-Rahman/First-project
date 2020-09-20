@@ -95,3 +95,11 @@ p{
   margin-left: 45%;
   margin-top: 30px;
 }
+
+.footer-sec{
+  background-color: rgb(92, 89, 89);
+  color: white;
+  padding: 8px;
+  margin-top: 265px;
+  text-align: center;
+}

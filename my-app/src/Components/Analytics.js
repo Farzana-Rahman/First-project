@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import {BeatLoader } from 'react-spinners'
 
 class Analytics extends Component {
 
@@ -8,12 +9,15 @@ class Analytics extends Component {
 
         this.state={
             data:[],
+            search:" ",
+            loading:true,
         }
     }
 
     componentDidMount(){
         axios.get("https://disease.sh/v3/covid-19/countries").then(response =>{
             this.setState({data: response.data})
+            this.setState({loading:false})
             console.log(this.state)
             
 
@@ -24,10 +28,30 @@ class Analytics extends Component {
 
 
 
+    updateSearch(event){
+        this.setState({search: event.target.value})
+    }
+    
+
 
     render() {
+        if(this.state.loading){
+            return <div className="load">
+                <h1>Loading</h1>
+                <BeatLoader></BeatLoader>
+            </div>
+        }
+        
+         
+        let filterdCountries=this.state.data.filter(
+            (c) =>{
+                return c.country.toLowerCase().indexOf(this.state.search.toLowerCase()) !== -1;
+            }
+        );
 
-        let data=this.state.data.map(singleData =>{
+
+
+        let data=filterdCountries.map(singleData =>{
             return(<tr key={singleData.index}>
                 <td>{singleData.country}</td>
                 <td>{singleData.todayCases}</td>
@@ -45,7 +69,10 @@ class Analytics extends Component {
 
         return (
             <div>
-                
+
+                <div className="search">
+                <input type="text" placeholder="Search a Country" onChange={this.updateSearch.bind(this)}></input>
+                </div>
                 <table>
                     <thead>
                         <tr>

@@ -83,3 +83,15 @@ p{
   
 
 }
+
+.search{
+  margin-left: 5%;
+  padding: 2px;
+  margin-top: 5px;
+ 
+}
+.load{
+  align-items: center;
+  margin-left: 45%;
+  margin-top: 30px;
+}

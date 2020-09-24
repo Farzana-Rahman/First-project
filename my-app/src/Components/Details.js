@@ -25,14 +25,17 @@ class Details extends Component {
                 <p> Sore throat </p>
 
                 <p> Diarrhoea </p>
-
-                <p> Conjunctivitis </p>
                 
                 <p>Headache </p>
 
                 <p> Loss of taste or smell </p>
 
                 <p> A rash on skin, or discolouration of fingers or toes </p>
+                <h5>Serious symptoms:</h5>
+                <p>Difficulty breathing or shortness of breath</p>
+                <p>Chest pain or pressure</p>
+                <p>Loss of speech or movement</p>
+                
                 <h4>Cause:</h4>
                 <p>COVID-19 is caused by infection with the severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) virus strain.</p>
 

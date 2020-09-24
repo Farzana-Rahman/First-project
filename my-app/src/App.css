@@ -103,3 +103,15 @@ p{
   margin-top: 265px;
   text-align: center;
 }
+
+.map{
+  margin: 40px 100px;
+}
+
+@media (max-width: 575.98px) {
+  .navbar-nav{
+    align-items: center;
+    margin-left:none ;
+  }
+
+}

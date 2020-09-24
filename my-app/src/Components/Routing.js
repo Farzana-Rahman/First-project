@@ -7,6 +7,7 @@ import Analytics from './Analytics'
 import Details from './Details';
 import Prevention from './Prevention'
 import Notfound from './Notfound';
+import Prediction from './Prediction'
 
 class Routing extends Component {
     render() {
@@ -19,6 +20,7 @@ class Routing extends Component {
                 <Route path="/details" component={Details}></Route>
                 <Route path="/prevention" component={Prevention}></Route>
                 <Route path="/about" component={About}></Route>
+                <Route path="/prediction" component={Prediction}></Route>
                 <Route component={Notfound}></Route>
                 </Switch>
                

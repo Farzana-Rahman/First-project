@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import Logo from '../images/img1.png';
+import Logo2 from '../images/image.png';
 
 class Navbar extends Component {
     render() {
@@ -35,9 +36,12 @@ class Navbar extends Component {
                        <li className="nav-item">
                             <NavLink exact className="nav-link" to="/about">About</NavLink>
                        </li>
+                       <li className="nav-item">
+                            <NavLink exact className="nav-link" to="/prediction"><img src={Logo2} width="35" height="35" alt=" "></img></NavLink>
+                       </li>
 
                    </ul>
-                
+          
                    
 
 

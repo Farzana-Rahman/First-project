@@ -104,14 +104,37 @@ p{
   text-align: center;
 }
 
-.map{
-  margin: 40px 100px;
+
+
+
+.op-style{
+  align-items: center;
+  background-color: rgb(219, 170, 219);
+  margin: 40px auto;
+  width: 60%;
+  padding: 30px;
+  height:350px
+}
+.options{
+  background-color: white;
+  padding: 6px;
+  border-radius: 7px;
+  color: black;
+  border:black 2px solid;
+  width: 50%;
+  margin: 5px auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.btn{
+  background-color: white;
+  border-radius: 5px;
+  color: brown;
+  border:black 2px solid;
+
+}
+.btn:hover{
+  background-color: gray;
+
 }
 
-@media (max-width: 575.98px) {
-  .navbar-nav{
-    align-items: center;
-    margin-left:none ;
-  }
-
-}

@@ -18,7 +18,7 @@ class Prevention extends Component {
         return (
             <Fragment>
             
-            <h3  style={{marginTop:"35px"}}>Let's know how to prevent COVID-19</h3>
+            <h3  style={{marginTop:"25px"}}>Let's know how to prevent COVID-19</h3>
             <div className="card-sec">
 
                 <div className="row">

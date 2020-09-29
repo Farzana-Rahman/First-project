@@ -34,11 +34,13 @@ class Navbar extends Component {
                        </li>
 
                        <li className="nav-item">
-                            <NavLink exact className="nav-link" to="/about">About</NavLink>
-                       </li>
-                       <li className="nav-item">
                             <NavLink exact className="nav-link" to="/prediction"><img src={Logo2} width="35" height="35" alt=" "></img></NavLink>
                        </li>
+
+                       <li className="nav-item">
+                            <NavLink exact className="nav-link" to="/about">About</NavLink>
+                       </li>
+                       
 
                    </ul>
           

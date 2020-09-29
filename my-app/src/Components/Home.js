@@ -1,6 +1,7 @@
 import React, { Component,Fragment } from 'react';
 import './Home.css'
 import axios from 'axios';
+import {Bar} from 'react-chartjs-2'
 
 class Home extends Component {
 
@@ -31,8 +32,30 @@ class Home extends Component {
 
     
 
+    
 
     render() {
+
+        
+    const barchart =(
+        
+            <Bar
+            data={{
+
+                labels:['TotalConfirmed','TotalDeaths','TotalRecovered'],
+                datasets:[{
+                    label:'people',
+                    backgroundColor:['blue','red','green'],
+                    data:[this.state.data1.cases, this.state.data1.deaths, this.state.data1.recovered]
+                }]
+            }}
+            options={{
+                legend:{display:false},
+                title:{display:true,text:`Worldwide state`}
+            }}
+            ></Bar>
+        
+    )
 
 
         return (
@@ -76,6 +99,10 @@ class Home extends Component {
 
                 </div>
                 </div>
+                <div className="barchart">
+                    { barchart}
+                </div>
+            
 
                 
             </Fragment>

@@ -142,3 +142,8 @@ p{
   background-color: rgb(231, 111, 42);
 }
 
+.barchart{
+  width: 80%;
+  margin: 0px auto;
+
+}

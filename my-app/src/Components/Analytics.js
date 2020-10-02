@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import {BeatLoader } from 'react-spinners'
+import {Bar} from 'react-chartjs-2'
+ 
 
 class Analytics extends Component {
 
@@ -11,14 +13,18 @@ class Analytics extends Component {
             data:[],
             search:" ",
             loading:true,
+            country:" ",
+            countryInfo:{},
+            name:" ",
+           
         }
-    }
+  }
 
     componentDidMount(){
         axios.get("https://disease.sh/v3/covid-19/countries").then(response =>{
             this.setState({data: response.data})
             this.setState({loading:false})
-            console.log(this.state)
+             console.log(this.state)
             
 
         }).catch(err =>{
@@ -27,14 +33,33 @@ class Analytics extends Component {
     }
 
 
-
+   
     updateSearch(event){
         this.setState({search: event.target.value})
     }
+
     
+    changeHandler = (e) =>{
+        const countryCode=e.target.value;
+
+        axios.get(`https://disease.sh/v3/covid-19/countries/${countryCode}`).then(response=>{
+            this.setState({country:countryCode})
+            this.setState({countryInfo:response.data})
+            this.setState({name:response.data.country})
+            console.log(this.state)
+
+        }).catch(err =>{
+            console.log(err)
+        })
+
+   
+
+    }
+
 
 
     render() {
+
         if(this.state.loading){
             return <div className="load">
                 <h1>Loading</h1>
@@ -53,7 +78,7 @@ class Analytics extends Component {
 
         let data=filterdCountries.map(singleData =>{
             return(<tr key={singleData.index}>
-                <td>{singleData.country}</td>
+                <td><button onClick={this.changeHandler.bind(this)} value={singleData.countryInfo.iso2} className="btn1">{singleData.country}</button></td>
                 <td>{singleData.todayCases}</td>
                 <td>{singleData.todayDeaths}</td>
                 <td>{singleData.todayRecovered}</td>
@@ -65,14 +90,41 @@ class Analytics extends Component {
             </tr>)
         })
 
+        const barchart =(
+        
+            <Bar
+            data={{
+
+                labels:['TotalConfirmed','TotalDeaths','TotalRecovered',],
+                datasets:[{
+                    label:'people',
+                    backgroundColor:['blue','red','green',],
+                    data:[ this.state.countryInfo.cases,
+                        this.state.countryInfo.deaths,
+                        this.state.countryInfo.recovered,
+                       
+                        ]
+                }]
+            }}
+            options={{
+                legend:{display:false},
+                title:{display:true,text:`COVID-19 state in ${this.state.name}`}
+            }}
+            ></Bar>
+        
+    )
+
 
 
         return (
+            <>
+            <div className="app">
             <div>
 
                 <div className="search">
                 <input type="text" placeholder="Search a Country" onChange={this.updateSearch.bind(this)}></input>
                 </div>
+
                 <table>
                     <thead>
                         <tr>
@@ -90,10 +142,16 @@ class Analytics extends Component {
                         {data}
                     </tbody>
                 </table>
-
-                
                 
             </div>
+            
+            <div className="barchart2">
+                    { barchart}
+        
+            </div>
+            
+            </div>
+            </>
         );
     }
 }

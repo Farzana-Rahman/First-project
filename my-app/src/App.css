@@ -30,7 +30,7 @@ body{
 
  table{
    margin: 0 auto;
-   width: 90%;
+   width: 70%;
    border-spacing: 0px 5px;
    border-collapse: separate;
    overflow-x: auto;
@@ -85,7 +85,7 @@ p{
 }
 
 .search{
-  margin-left: 5%;
+  margin-left: 0;
   padding: 2px;
   margin-top: 5px;
  
@@ -142,8 +142,23 @@ p{
   background-color: rgb(231, 111, 42);
 }
 
+
 .barchart{
   width: 80%;
   margin: 0px auto;
 
+}
+.barchart2{
+ 
+  margin: 150px auto;
+  height: 500px;
+  width: 60%;
+
+}
+
+.btn1{
+  background-color: #F1B9B0;
+}
+.app{
+  display: flex;
 }
